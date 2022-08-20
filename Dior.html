@@ -1,0 +1,3431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial- scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="./img/logo.png" />
+    <title>PopWeb</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .header_navbar {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 900;
+        transition: 5s;
+      }
+
+      .container {
+        width: 1190px;
+        margin: auto;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+      }
+
+      .f-column {
+        flex-direction: column;
+      }
+
+      .justify-content-center {
+        justify-content: center;
+      }
+
+      .justify-content-between {
+        justify-content: space-between;
+      }
+
+      .align-items-center {
+        align-items: center;
+      }
+
+      nav {
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        background: white;
+        border-radius: 90px;
+        transform: translateY(40px);
+        padding: 12px 40px;
+      }
+
+      .title_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .menu_item {
+        margin-right: 40px;
+      }
+
+      .menu_item:last-child {
+        margin-right: 0;
+      }
+
+      .menu_link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: -0.065em;
+        color: #120212;
+        line-height: 104.53%;
+      }
+
+      .nav_btn_link {
+        display: block;
+        padding: 17px 34px;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.25);
+        border-radius: 47px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 104.53%;
+        letter-spacing: -0.065em;
+        color: #ffffff;
+        width: 168px;
+        height: 56px;
+      }
+
+      .hero_btns .nav_btn_link {
+        width: 231px;
+        height: 56px;
+        padding: 17px 40px 16px 40px;
+        text-align: center;
+        letter-spacing: 0.45px;
+      }
+
+      /* navbar ended */
+
+      .hero {
+        margin-top: 230px;
+      }
+
+      .hero_info {
+        width: 520px;
+      }
+
+      .hero_title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 76px;
+        line-height: 118.53%;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 40px;
+      }
+
+      .hero_text {
+        width: 370px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+        margin-bottom: 56px;
+      }
+
+      .hero_btn_second {
+        margin-left: 28px;
+      }
+
+      .hero_img img {
+        position: absolute;
+        width: 761.43px;
+        height: 700px;
+        left: 554px;
+        top: -118px;
+      }
+
+      .hero_tbn_link {
+        padding: 18px 51px;
+      }
+
+      /* section started */
+
+      .section_title {
+        margin-top: 79px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 76px;
+        line-height: 118.53%;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 32px;
+      }
+
+      .s1.section_title {
+        margin-bottom: 25px;
+      }
+
+      .prpject_card {
+        padding: 29px 40px;
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.18);
+        border-radius: 52px;
+        margin-bottom: 32px;
+        height: 264px;
+      }
+
+      .card_title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 16px;
+      }
+
+      .card_text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160.03%;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .card_btn {
+        margin-top: 30px;
+        padding: 14px 0 12px;
+        border: none;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 4.49383px 47.1852px rgba(0, 0, 0, 0.25);
+        border-radius: 35.9506px;
+        width: 312px;
+        height: 56px;
+      }
+
+      .card_btn a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 104.53%;
+        letter-spacing: 0px;
+        color: #ffffff;
+      }
+
+      .card_img {
+        position: relative;
+      }
+
+      .card_img_img {
+        position: absolute;
+        width: 474.42px;
+        height: 307px;
+        right: -44px;
+        top: -151px;
+      }
+
+      .more_btn {
+        box-shadow: 0px 11px 60px rgb(0 0 0 / 18%);
+        border-radius: 52px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 1.8;
+        /* text-align: center; */
+        letter-spacing: 0.8px;
+        color: #120212;
+        border: none;
+        background: #fff;
+        width: 328px;
+        height: 80px;
+        padding: 18px 26px 18px 40px;
+      }
+
+      .more_btn svg {
+        margin-left: 8px;
+      }
+
+      /* section ended */
+
+      .work_info {
+        width: 474px;
+      }
+
+      .sectitle {
+        text-align: start;
+      }
+
+      .work_text {
+        width: 100%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .work_img {
+        position: relative;
+      }
+
+      .work_img_img {
+        width: 578px;
+        position: absolute;
+        right: -110px;
+        top: 62px;
+      }
+
+      /* section started */
+
+      .uslug_card {
+        width: 376px;
+        height: 688px;
+        padding: 27px 25px;
+        align-items: center;
+        background: #ffffff;
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        border-radius: 52px;
+        justify-content: center;
+      }
+
+      .uslug_card_info {
+        margin-top: 6px;
+        text-align: center;
+      }
+
+      .uslug_card_title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 4px;
+      }
+
+      .uslug_card_text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 156.03%;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+        margin-bottom: 83px;
+      }
+
+      .uslug_card_bottom_price {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      .uslug_card_bottom_price span {
+        font-size: 20px;
+      }
+
+      .uslug_card_bottom_btn {
+        cursor: pointer;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 4.49383px 47.1852px rgba(0, 0, 0, 0.25);
+        border-radius: 35.9506px;
+        border: none;
+        padding: 17px 75px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 104.53%;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+      }
+
+      .btn_more {
+        margin-top: 50px;
+        margin-bottom: 80px;
+      }
+
+      .sectext {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 32px;
+      }
+
+      /*  */
+
+      .level_card {
+        width: 376px;
+        height: 244px;
+        background: #ffffff;
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        border-radius: 52px;
+
+        padding: 35px 40px;
+        margin-right: 28px;
+        margin-bottom: 28px;
+        position: relative;
+      }
+
+      .level_card:nth-child(3),
+      .level_card:nth-child(6) {
+        margin-right: 0;
+      }
+
+      .level_card_title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        /* or 44px */
+
+        letter-spacing: -0.065em;
+
+        color: #120212;
+        margin-bottom: 18px;
+      }
+
+      .level_card_text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 156.03%;
+        /* or 31px */
+
+        letter-spacing: -0.065em;
+
+        /* 2st temniy */
+
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .bottom_img {
+        position: absolute;
+        top: -115px;
+        left: -40px;
+        z-index: -333;
+      }
+
+      .asdasd .bottom_img {
+        top: -200px;
+        left: -40px;
+        z-index: -371;
+        transform: rotate(180deg);
+      }
+
+      .top_img {
+        position: absolute;
+        transform: rotate(0deg);
+        right: -40px;
+        top: -104px;
+        z-index: -333;
+      }
+
+      .alien_card {
+        height: 480px;
+      }
+
+      .alien_card_text {
+        margin-bottom: 0;
+      }
+
+      .alien_card_info {
+        margin-top: 10px;
+      }
+
+      .alien_btn {
+        margin-top: 32px;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        border-radius: 52px;
+        border: none;
+        padding: 18px 101px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        /* identical to box height, or 44px */
+
+        letter-spacing: -0.065em;
+
+        color: #ffffff;
+        cursor: pointer;
+        margin-bottom: 113px;
+      }
+
+      .contact_titls {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        /* or 44px */
+
+        letter-spacing: -0.065em;
+        width: 496px;
+        color: #120212;
+        margin-bottom: 32px;
+      }
+
+      .social_div,
+      .form_div {
+        width: 530px;
+      }
+
+      .form {
+        background: #ffffff;
+        /* д */
+
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        border-radius: 52px;
+        width: 525px;
+        height: 745px;
+        padding: 41px 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+
+      .form label {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        /* identical to box height, or 44px */
+
+        letter-spacing: -0.065em;
+
+        color: #120212;
+        margin-bottom: 16px;
+      }
+
+      .form input {
+        border: 1.4px solid rgba(0, 0, 0, 0.64);
+        border-radius: 44px;
+        padding: 15px 40px;
+        padding-top: 16px;
+        padding-bottom: 14px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 156.03%;
+        letter-spacing: -1px;
+        color: rgba(0, 0, 0, 0.64);
+        margin-bottom: 24px;
+      }
+
+      .form button {
+        width: 287px;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 4.49383px 47.1852px rgba(0, 0, 0, 0.25);
+        border-radius: 44px;
+        border: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 104.53%;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        padding: 21px 0;
+      }
+
+      .cant {
+        width: 520px;
+      }
+
+      .social_card {
+        background: #ffffff;
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        border-radius: 52px;
+        padding: 7px 10px;
+        position: relative;
+        margin-bottom: 32px;
+      }
+
+      .social_title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-left: 28px;
+      }
+
+      .social_link a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        /* or 44px */
+
+        letter-spacing: -0.065em;
+
+        color: #120212;
+        margin-right: 37px;
+      }
+
+      .social_img {
+        position: absolute;
+        top: -302px;
+        left: -61px;
+        z-index: -333;
+        height: 501px;
+        width: 650px;
+      }
+
+      /* footer started */
+
+      footer {
+        background-color: #000;
+        padding: 45px 0 55px;
+      }
+
+      @media (max-width: 800px) {
+        footer {
+          margin-top: 40px;
+        }
+      }
+
+      .footer_menu_title {
+        margin-right: 34px;
+      }
+
+      .footer_menu_title:last-child {
+        margin-right: 0;
+      }
+
+      .link_foot {
+        display: block;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 104.53%;
+        /* identical to box height, or 21px */
+
+        letter-spacing: -0.065em;
+
+        color: #939393;
+        margin-bottom: 16px;
+      }
+
+      .tit {
+        display: block;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 104.53%;
+        /* identical to box height, or 21px */
+
+        letter-spacing: -0.065em;
+
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+
+      .footer_button button {
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.25);
+        border-radius: 47px;
+        padding: 17px 29px;
+        border: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 104.53%;
+        width: 162px;
+        height: 56px;
+        letter-spacing: 0px;
+        color: #ffffff;
+      }
+
+      .menu_button {
+        display: none;
+      }
+
+      .before_card_btn {
+        display: none;
+      }
+
+      .prpject_card:last-child {
+        display: none;
+      }
+
+      .s2 {
+        display: none;
+      }
+
+      .uslug_card:last-child {
+        display: none;
+      }
+
+      .cart_1 img {
+        width: 280.68px;
+        height: 160px;
+        object-fit: none;
+        margin-top: 20px;
+        margin-left: 24px;
+      }
+
+      .cart_3 img {
+        width: 128%;
+        object-fit: revert;
+        margin-top: -56px;
+        margin-left: -69px;
+      }
+
+      .cart_2 img {
+        margin-top: -30px;
+        margin-left: 10px;
+      }
+
+      .cart_2_cart {
+        width: 98.5%;
+        margin-top: 0;
+      }
+
+      .cart_3_cart {
+        margin-top: -23px;
+        width: 96%;
+      }
+
+      .cart_3_cart .uslug_card_text {
+        margin-bottom: 125px;
+      }
+
+      .uslug_card .uslug_card_bottom_btn {
+        width: 301px;
+        height: 56px;
+      }
+
+      .cart_1 {
+        position: absolute;
+        top: 48px;
+      }
+
+      .cart_2 {
+        position: absolute;
+        top: 41px;
+      }
+
+      .cart_3 {
+        position: absolute;
+        top: 41px;
+        left: 28px;
+      }
+
+      .cart_1_cart .uslug_card_text {
+        margin-bottom: 0;
+      }
+
+      .cart_2_cart .uslug_card_text {
+        margin-bottom: 0;
+      }
+
+      .cart_3_cart .uslug_card_text {
+        margin-bottom: 0;
+      }
+
+      .cart_2_cart .uslug_card_bottom_price {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 134.03%;
+        letter-spacing: -3px;
+        color: #120212;
+      }
+
+      .cart_1_cart .uslug_card_bottom {
+        position: absolute;
+        bottom: 53px;
+        left: 39px;
+      }
+
+      .cart_3_cart .uslug_card_bottom {
+        position: absolute;
+        bottom: 53px;
+        left: 32px;
+      }
+
+      .cart_3_cart .uslug_card_bottom_price {
+        line-height: 134.03%;
+        color: #120212;
+      }
+
+      .cart_2_cart .uslug_card_bottom {
+        position: absolute;
+        bottom: 53px;
+        left: 35px;
+      }
+
+      .cart_1_cart .uslug_card_bottom_price {
+        line-height: 135.03%;
+      }
+
+      .cart_1_cart .uslug_card_bottom_btn {
+        line-height: 105.53%;
+        letter-spacing: 0px;
+        padding: 17px 0;
+      }
+
+      .uslug_card_bottom_btn {
+        line-height: 107.53%;
+        letter-spacing: 0px;
+      }
+
+      .db {
+        width: 383px;
+        height: 80px;
+        padding: 18px 0 15px;
+        margin-top: 40px;
+        margin-bottom: 2px;
+        font-size: 28px;
+        line-height: 10.03%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        letter-spacing: -1.2px;
+      }
+
+      .f4 {
+        margin-bottom: 18px;
+      }
+
+      .level_card_title {
+        margin-bottom: 7px;
+      }
+
+      .level_card {
+        padding: 35px 0 40px 40px;
+      }
+
+      .alien .section_title {
+        margin-top: 120px;
+        margin-left: -10px;
+        text-align: center;
+      }
+
+      .uslug_cart_1 {
+        position: absolute;
+        width: 267.1px;
+        height: 193.68px;
+        top: 55px;
+        left: 80px;
+      }
+
+      .uslug_cart_2 {
+        position: absolute;
+        width: 267.1px;
+        height: 193.68px;
+        top: 36px;
+        left: 21px;
+      }
+
+      .uslug_cart_3 {
+        position: absolute;
+        width: 267.1px;
+        height: 193.68px;
+        top: 12px;
+        left: 15px;
+      }
+
+      .alien_card_info_1 {
+        position: absolute;
+        width: 100%;
+        height: 169.88px;
+        left: -2px;
+        bottom: 53px;
+      }
+
+      .alien_card_info_3 {
+        position: absolute;
+        width: 100%;
+        height: 169.88px;
+        left: -6px;
+        bottom: 50px;
+      }
+
+      .alien_card_info_2 {
+        position: absolute;
+        width: 100%;
+        height: 169.88px;
+        left: -2px;
+        bottom: 50px;
+      }
+
+      .alien_card_info_3 {
+        position: absolute;
+        width: 100%;
+        height: 169.88px;
+        left: -2px;
+        bottom: 50px;
+      }
+
+      .alien_card {
+        position: relative;
+      }
+
+      .btn_alien {
+        width: 384px;
+        height: 80px;
+        letter-spacing: 0;
+        margin-bottom: 34px;
+        padding: 18px 0;
+      }
+
+      .sect_title_work {
+        margin-left: -4px;
+        margin-bottom: 25px;
+      }
+
+      .mb-text {
+        margin-top: 24px;
+      }
+
+      .work_img_img_work_img_img {
+        width: 678px;
+        position: absolute;
+        right: -124px;
+        top: 9px;
+      }
+
+      .f5 {
+        margin-bottom: 25px;
+        margin-left: 8px;
+        margin-top: 78px;
+      }
+
+      .cant {
+        width: 100%;
+        margin-left: -5px;
+      }
+
+      .vk_text a {
+        margin-right: 38px;
+        margin-top: 4px;
+      }
+
+      .whatsapp-text a {
+        margin-right: 36px;
+      }
+
+      .form button {
+        width: 287px;
+        height: 64px;
+        margin-top: 9px;
+        letter-spacing: 0px;
+      }
+
+      .FooterLink {
+        width: 145px;
+        height: 36px;
+        font-weight: 700;
+        font-size: 34.875px;
+        line-height: 104.53%;
+        letter-spacing: -0.065em;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 49.56%,
+          #f27121 96.51%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-top: 10px;
+        margin-left: 3px;
+      }
+
+      .footer_menu {
+        margin-top: 16px;
+        margin-left: -7px;
+      }
+
+      .Footer_footer {
+        margin-top: 99px;
+        margin-left: 5px;
+      }
+
+      .footer_socials {
+        width: 150px;
+        order: -1;
+      }
+
+      .footer_socials ul {
+        justify-content: space-between;
+      }
+
+      .phoneNumberFooter {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 104.53%;
+        letter-spacing: -0.065em;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 49.56%,
+          #f27121 96.51%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      .more_btn_1 {
+        width: 328px;
+        height: 80px;
+        padding: 18px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        letter-spacing: -2.1px;
+      }
+
+      .uslug_card_bottom_btn {
+        padding: 17px 0;
+      }
+
+      .big_uslug_cards {
+        padding-top: 30px;
+        height: 780px;
+        overflow-y: clip;
+        overflow-x: inherit;
+        transition: 0.5s;
+      }
+
+      /* Mobile */
+
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .container_media {
+        width: 90%;
+        margin: auto;
+      }
+
+      .title_h2 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 52px;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .title_h2___ {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 52px;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 12px;
+      }
+
+      :focus {
+        outline: none;
+      }
+
+      header {
+        padding-top: 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header nav {
+        width: 90%;
+        background: #ffffff;
+        -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 53.8487px;
+        padding: 10px 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        position: fixed;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 90;
+      }
+
+      .navbar_bars {
+        padding: 15px 0;
+        position: absolute;
+        top: 0%;
+        right: -100%;
+        transform: translate(0%);
+        background: #ffffff;
+        transition: 0.8s;
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        border-radius: 10px;
+        width: 90%;
+        z-index: 91;
+        text-align: center;
+      }
+
+      .navbar_bars span {
+        display: flex;
+        justify-content: end;
+        padding: 0 20px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 104.53%;
+        /* identical to box height, or 21px */
+
+        letter-spacing: -0.065em;
+
+        /* 2st temniy */
+
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .navbar_bars ul li {
+        margin-top: 10px;
+      }
+
+      .navbar_bars ul li a {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 104.53%;
+        /* identical to box height, or 21px */
+
+        letter-spacing: -0.065em;
+
+        /* 2st temniy */
+
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      header nav .logo a {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 104.53%;
+        letter-spacing: -1px;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 49.56%,
+          #f27121 96.51%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      header nav .bars_div {
+        width: 45%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+      }
+
+      header nav .bars_div .zakaz {
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-box-shadow: 0px 2.39328px 25.1294px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 2.39328px 25.1294px rgba(0, 0, 0, 0.25);
+        border-radius: 28.121px;
+        padding: 11px 17px;
+        text-align: center;
+        margin-right: 16px;
+      }
+
+      header nav .bars_div .zakaz a {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11.9664px;
+        line-height: 104.53%;
+        /* identical to box height, or 13px */
+        letter-spacing: -0.065em;
+        color: #ffffff;
+      }
+
+      header .head_img {
+        width: 100%;
+        padding-top: 55px;
+      }
+
+      header .head_img img {
+        width: 100%;
+      }
+
+      header .head_text h1 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 52px;
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      header .head_text p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+        margin-top: 32px;
+      }
+
+      header .head_text .head_but {
+        margin-top: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        width: fit-content;
+        margin-bottom: 40px;
+      }
+
+      header .head_text .head_but button {
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-box-shadow: 0px 3.43494px 36.0668px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3.43494px 36.0668px rgba(0, 0, 0, 0.25);
+        border-radius: 27.4795px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 104.53%;
+        margin-right: 17px;
+        letter-spacing: -0.03em;
+        padding: 13px 28px;
+        color: #ffffff;
+        border: none;
+        width: 173px;
+        height: 44px;
+      }
+
+      header .head_text .head_but a {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        letter-spacing: -0.03em;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        height: 18px;
+        width: max-content;
+      }
+
+      .sec1 .sec1_cardss {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+
+      .sec1 .sec1_cardss .sec1_card {
+        width: 48%;
+        min-height: 290px;
+        background: #ffffff;
+        -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 36.3671px;
+
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .sec1 .sec1_cardss .sec1_card img {
+        width: 100%;
+      }
+
+      .sec1 .sec1_cardss .sec1_card h4 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 8px;
+      }
+
+      .sec1 .sec1_cardss .sec1_card p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 156.03%;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+        min-height: 110px;
+      }
+
+      .sec1 .sec1_cardss .sec1_card button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 13px 34px;
+        text-align: center;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-box-shadow: 0px 3.31731px 34.8317px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3.31731px 34.8317px rgba(0, 0, 0, 0.25);
+        border-radius: 26.5385px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 104.53%;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        width: 156.7px;
+        height: 44px;
+        border: none;
+        margin-bottom: 8px;
+      }
+
+      .sec1 .sec1_cardss .sec1_card button a {
+        color: #ffffff;
+      }
+
+      .sec2 .sec2_img {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .sec2 .sec2_img img {
+        width: 80%;
+        margin: auto;
+      }
+
+      .sec2 .sec2_text {
+        margin-bottom: 40px;
+      }
+
+      .sec2 .sec2_text h4 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      .sec2 .sec2_text p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+        margin-top: 16px;
+      }
+
+      .sec3 .sec1_cardss {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+
+      .sec3 .sec1_cardss .sec1_card {
+        width: 172px;
+        min-height: 290px;
+        background: #ffffff;
+        -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 36.3671px;
+        padding: 9px 1px 9px 4px;
+        text-align: center;
+        margin-bottom: 13px;
+      }
+
+      .sec3 .sec1_cardss .sec1_card img {
+        width: 100%;
+        height: 120px;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+
+      .sec3 .sec1_cardss .sec1_card h4 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 8px;
+        min-height: 30px;
+      }
+
+      .sec3 .sec1_cardss .sec1_card p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 156.03%;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .comp_text {
+        min-height: 195px;
+      }
+
+      .sec3 .sec1_cardss .sec1_card h5 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32.3216px;
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      .sec3 .sec1_cardss .sec1_card h5 span {
+        font-size: 13px;
+      }
+
+      .sec3 .sec1_cardss .sec1_card button {
+        margin-top: 10px;
+        width: 156.7px;
+        height: 44px;
+        padding: 13px 39px;
+        text-align: center;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-box-shadow: 0px 3.31731px 34.8317px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3.31731px 34.8317px rgba(0, 0, 0, 0.25);
+        border-radius: 26.5385px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 104.53%;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        border: none;
+      }
+
+      .sec3 .sec1_cardss .card_d_n_b {
+        display: none;
+      }
+
+      .sec3 .sec1_cardss .cls_more {
+        display: none !important;
+      }
+
+      .sec3 .sec1_cardss .view_more {
+        margin: auto;
+        background: #ffffff;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 104.53%;
+        letter-spacing: -0.03em;
+        color: #120212;
+        -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 26.5385px;
+        padding: 10px 15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        border: none;
+        margin-bottom: 40px;
+        width: 274px;
+        height: 44px;
+      }
+
+      .sec3 .sec1_cardss .ortga {
+        width: 141px;
+        height: 44px;
+      }
+
+      .sec3 .sec1_cardss .view_more img {
+        margin-left: 10px;
+      }
+
+      .sec4 {
+        position: relative;
+        width: 100%;
+      }
+
+      .sec4 .sec4_text p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-bottom: 24px;
+      }
+
+      .sec4 .sec4_radius {
+        position: absolute;
+        left: 0;
+        top: 135px;
+        width: 360px;
+        height: 255px;
+        z-index: -1;
+      }
+
+      .sec4 .radius_card {
+        width: 240px;
+        height: 148px;
+        background: #ffffff;
+        -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 36.37px;
+        padding-top: 19px;
+        padding-left: 19px;
+        margin-bottom: 12px;
+      }
+
+      .sec4 .radius_card h3 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      .sec4 .radius_card p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+        height: 80px;
+      }
+
+      .sec4 .r_card_d_nb {
+        display: none;
+      }
+
+      .sec4 .view_more2 {
+        width: 243px;
+        height: 44px;
+        margin: auto;
+        background: #ffffff;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 104.53%;
+        letter-spacing: -0.03em;
+        color: #120212;
+        -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 26.5385px;
+        padding: 10px 15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        border: none;
+        margin-bottom: 40px;
+        margin-top: 24px;
+      }
+
+      .sec4 .ortga {
+        width: 141px;
+        height: 44px;
+      }
+
+      .sec4 .view_more2 img {
+        margin-left: 10px;
+      }
+
+      .sec5 {
+        position: relative;
+        width: 100%;
+      }
+
+      .sec5 .swiper_div {
+        overflow-x: hidden;
+      }
+
+      .sec5 .swiper_div .swiper {
+        width: 100%;
+        height: 100%;
+        overflow: inherit !important;
+      }
+
+      .sec5 .swiper_div .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .sec5 .swiper_div .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .sec5 .swiper_div .slide_card {
+        width: 220px;
+        height: 301px;
+        padding: 20px 10px;
+        background: #ffffff;
+
+        box-shadow: 0px 0px 33px rgb(0 0 0 / 9%);
+        border-radius: 36.37px;
+        margin: 20px 0;
+      }
+
+      .sec5 .swiper_div .slide_card img {
+        width: 100%;
+        height: 128px;
+        margin: 0;
+      }
+
+      .sec5 .swiper_div .slide_card h4 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      .sec5 .swiper_div .slide_card p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 156.03%;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .sec6 .sec6_img {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .sec6 .sec6_img img {
+        width: 80%;
+        margin-left: 30px;
+      }
+
+      .sec6 .sec6_text p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.64);
+        margin-bottom: 40px;
+      }
+
+      .sec7 h3 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        margin-bottom: 40px;
+        color: #120212;
+      }
+
+      .sec7 form {
+        background: #ffffff;
+        /* ээээ */
+        -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 36.37px;
+        padding: 28px 26px;
+      }
+
+      .sec7 form label {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 156.03%;
+        /* or 27px */
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      .sec7 form input {
+        width: 100%;
+        height: 44px;
+        margin-top: 11px;
+        margin-bottom: 16px;
+        border: 0.97044px solid rgba(0, 0, 0, 0.64);
+        border-radius: 30.4994px;
+        padding: 9px 18px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .sec7 form button {
+        width: 224.49px;
+        height: 44px;
+        padding: 9px 0;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-box-shadow: 0px 3.11498px 32.7073px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3.11498px 32.7073px rgba(0, 0, 0, 0.25);
+        border-radius: 30.4994px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 104.53%;
+        border: none;
+        letter-spacing: -0.03em;
+        margin-top: 22px;
+        color: #ffffff;
+      }
+
+      .sec7 h4 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19.2598px;
+        margin-top: 35px;
+        color: #120212;
+        width: max-content;
+        height: 60px;
+      }
+
+      .button_zakaz {
+        width: 189px;
+        height: 44px;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.165);
+        border-radius: 26.5385px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 17.5px;
+        line-height: 104.53%;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        margin: auto;
+        margin-bottom: 40px;
+        cursor: pointer;
+      }
+
+      .sec7 .link_div {
+        padding-bottom: 7px;
+        margin-top: 20px;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-box-shadow: 0px 4.1271px 28.8897px rgba(0, 0, 0, 0.23);
+        box-shadow: 0px 4.1271px 28.8897px rgba(0, 0, 0, 0.23);
+        border-radius: 53.6523px 53.6523px;
+      }
+
+      .sec7 .link_div .limk_card {
+        background: #ffffff;
+        -webkit-box-shadow: 0px 2.7514px 28.8897px rgba(0, 0, 0, 0.23);
+        box-shadow: 0px 2.7514px 28.8897px rgba(0, 0, 0, 0.23);
+        border-radius: 35.7682px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 5px;
+        margin-bottom: 20px;
+      }
+
+      .sec7 .link_div .limk_card .icon_veb a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 156.03%;
+        /* or 27px */
+
+        letter-spacing: -0.065em;
+
+        color: #120212;
+        margin-left: 10px;
+      }
+
+      .sec7 .link_div .limk_card .icon_veb a img {
+        margin-right: 4px;
+      }
+
+      .sec7 .link_div .limk_card .href_div a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 156.03%;
+
+        letter-spacing: -0.065em;
+
+        color: #120212;
+      }
+
+      .sec7 .link_div .limk_card .href_div a img {
+        margin-left: 7px;
+        width: 37px;
+      }
+
+      footer {
+        background: #000000;
+        padding: 25px 0 30px;
+      }
+
+      footer .foot_logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      footer .foot_logo img {
+        width: 148.21px;
+        height: 33.19px;
+      }
+
+      footer .foot_logo .fuut_butt {
+        width: 134px;
+        height: 45.04px;
+        padding: 9px 0;
+        text-align: center;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        -webkit-box-shadow: 0px 3.31731px 34.8317px rgb(0 0 0 / 25%);
+        box-shadow: 0px 3.31731px 34.8317px rgb(0 0 0 / 25%);
+        border-radius: 26.5385px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17.5px;
+        line-height: 104.53%;
+        /* identical to box height, or 18px */
+
+        letter-spacing: -0.065em;
+
+        color: #ffffff;
+        border: none;
+      }
+
+      .foot_nav {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .foot_n1 {
+        margin-top: 40px;
+        justify-content: space-between;
+      }
+
+      .foot_n2 {
+        margin-bottom: 150px;
+      }
+
+      .ul_footer {
+        margin-left: 15px;
+      }
+
+      .foot_nav ul {
+        margin-bottom: 30px;
+        width: 30%;
+      }
+
+      .foot_nav ul li {
+        margin-top: 12px;
+      }
+
+      .foot_nav ul li a {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 104.53%;
+        letter-spacing: -0.065em;
+        color: #939393;
+      }
+
+      .foot_nav ul .foot_gl {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 104.53%;
+        letter-spacing: -0.065em;
+        color: #ffffff;
+      }
+
+      .foot_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      footer .foot_b_icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .number_f {
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 49.56%,
+          #f27121 96.51%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.5px;
+        line-height: 104.53%;
+        letter-spacing: -0.065em;
+      }
+
+      .landing_page {
+        margin-top: 120px;
+      }
+      .landing_page .title {
+        font-weight: 500;
+        font-size: 76px;
+        line-height: 118.53%;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: #120212;
+      }
+
+      .landing_main img:first-child {
+        margin-top: 20px;
+      }
+
+      .all_projects .title_drugie {
+        font-weight: 500;
+        font-size: 76px;
+        line-height: 118.53%;
+        text-align: center;
+        letter-spacing: -0.065em;
+        color: #120212;
+        margin-top: 70px;
+        margin-bottom: 32px;
+      }
+
+      @media (max-width: 420px) {
+        .sec7 h4 {
+          font-size: 17.2598px;
+        }
+      }
+
+      @media (max-width: 402px) {
+        .sec7 h4 {
+          font-size: 17.2598px;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .desktop {
+          display: block;
+        }
+
+        .mobile {
+          display: none;
+        }
+      }
+
+      @media (max-width: 999px) {
+        .desktop {
+          display: none;
+        }
+
+        .mobile {
+          display: block;
+        }
+
+        .landing_page .landing_main img {
+          margin-bottom: -9px;
+        }
+        .landing_page {
+          margin-top: 100px;
+          padding-bottom: 20px;
+        }
+
+        .landing_main img:first-child {
+          margin-top: 20px;
+        }
+
+        .landing_page .mediaTitle {
+          font-weight: 500;
+          font-size: 52px;
+          line-height: 118.53%;
+          letter-spacing: -0.065em;
+          color: #120212;
+        }
+
+        .container {
+          width: 90%;
+          margin: auto;
+        }
+
+        .title_h2 {
+          width: 80%;
+          margin: auto;
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .desktop_nav {
+        width: 100%;
+      }
+
+      .dizayn_sayt {
+        margin-top: -30px;
+        margin-left: 10px;
+        width: 190px;
+        height: 235px;
+      }
+
+      .dizayn_sayt_1 {
+        position: absolute;
+        top: 18px;
+        left: 86px;
+      }
+
+      .cart_one_1 img {
+        margin-top: 0;
+        object-fit: contain;
+      }
+
+      .cart_three_3 {
+        position: absolute;
+        top: 97px;
+        left: 150px;
+        width: 179px;
+      }
+
+      .bars {
+        margin-top: 5px;
+      }
+
+      .landing_main {
+        display: flex;
+        flex-direction: column;
+      }
+      .landing_main img {
+        margin-bottom: -2px;
+      }
+      .more_btnnn {
+        width: 384px;
+        height: 80px;
+        background: linear-gradient(
+          90.65deg,
+          #8a2387 2.88%,
+          #e94057 52.73%,
+          #f27121 96.51%
+        );
+        box-shadow: 0px 11px 60px rgba(0, 0, 0, 0.18);
+        border-radius: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 156.03%;
+        letter-spacing: -0.065em;
+        color: #ffffff;
+      }
+
+      /* New */
+
+      .menu_link {
+        color: rgba(0, 0, 0, 0.64);
+      }
+
+      .nav_btn_link,
+      .card_btn,
+      .uslug_card_bottom_btn,
+      .btn_alien,
+      .form button,
+      .footer_button button,
+      .footer_socials a img,
+      .menu_link,
+      .footer_tel,
+      .link_foot,
+      .more_btnnn,
+      .social_card img {
+        transition: 300ms ease-out;
+      }
+
+      .menu_link:hover {
+        color: #120212;
+      }
+
+      .nav_btn_link:hover,
+      .card_btn:hover,
+      .uslug_card_bottom_btn:hover,
+      .btn_alien:hover,
+      .form button:hover,
+      .footer_button button:hover,
+      .footer_socials a:hover img,
+      .footer_tel:hover,
+      .more_btnnn:hover,
+      .social_card img:hover {
+        transform: scale(1.1);
+      }
+
+      .link_foot:hover {
+        color: #fff;
+      }
+      .menu_link:hover {
+        color: #120212;
+      }
+      .social_card img {
+        cursor: pointer;
+        transition: 300ms ease-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="desktop">
+      <header>
+        <div class="container header_navbar">
+          <nav
+            class="row justify-content-between align-item-center desktop_nav"
+          >
+            <div class="title row align-items-center">
+              <a href="./index.html" class="title_img">
+                <img src="./img/Logo.webp" alt="" />
+              </a>
+            </div>
+            <div class="menu row align-items-center">
+              <ul class="menu_ul row align-items-center">
+                <li class="menu_item">
+                  <a href="./index.html" class="menu_link">Главная</a>
+                </li>
+                <li class="menu_item">
+                  <a
+                    href="./index.html#spektoruslug"
+                    class="menu_link Спектр_Услуг_btn"
+                    >Стоимость</a
+                  >
+                </li>
+                <li class="menu_item">
+                  <a href="#" class="menu_link Последние_Проекты_btn"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="menu_item">
+                  <a
+                    href="#contactPage"
+                    class="menu_link zakaz_in_form_big Contact_Page_btn"
+                    >Контакты</a
+                  >
+                </li>
+                <li class="menu_item">
+                  <a href="./index.html#work" class="menu_link Наш_Подход_btn"
+                    >О студии</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="nav_btn">
+              <a
+                href="#contactPage"
+                class="nav_btn_link zakaz_in_form_big Contact_Page_btn"
+                >ЗАКАЗАТЬ</a
+              >
+            </div>
+            <div
+              class="menu_button row align-items-center justify-content-center"
+            ></div>
+          </nav>
+        </div>
+        <div class="container">
+          <div class="landing_page">
+            <h1 class="title">
+              Концепт Главной Страницы <br />
+              Интернет-Магазина Dior
+            </h1>
+            <div class="landing_main">
+              <img src="./img/dior1.webp" alt="" class="desc" />
+              <img src="./img/dior2.webp" alt="" class="desc" />
+              <img src="./img/internet_Dior.webp" alt="" class="desc" />
+            </div>
+          </div>
+          <div class="all_projects" id="Последние_Проекты">
+            <h2 class="title_drugie">Другие Проекты</h2>
+            <div class="row">
+              <div
+                class="prpject_card row justify-content-between align-items-center"
+              >
+                <div class="card_info">
+                  <h4 class="card_title">Концепт Landing Page для StarBucks</h4>
+                  <p class="card_text">
+                    Концепт одностраничного сайта для презентации <br />
+                    нового кафе от StarBucks
+                  </p>
+                  <button class="card_btn">
+                    <a href="./starbucks.html" class="after_btn"
+                      >Смотреть полностью</a
+                    >
+                    <a href="./starbucks.html" class="before_card_btn"
+                      >Смотреть</a
+                    >
+                  </button>
+                </div>
+                <div class="card_img">
+                  <img src="./img/card2.webp" alt="" class="card_img_img" />
+                </div>
+              </div>
+              <div
+                class="prpject_card row justify-content-between align-items-center"
+              >
+                <div class="card_info">
+                  <h4 class="card_title">Landing Page для Интернет-Пиццерии</h4>
+                  <p class="card_text">
+                    Одностраничный сайт для интернет-пиццерии <br />
+                    с возможностью заказа еды онлайн
+                  </p>
+                  <button class="card_btn">
+                    <a href="./pizza.html" class="after_btn"
+                      >Смотреть полностью</a
+                    >
+                    <a href="./pizza.html" class="before_card_btn">Смотреть</a>
+                  </button>
+                </div>
+                <div class="card_img">
+                  <img src="./img/card3.webp" alt="" class="card_img_img" />
+                </div>
+              </div>
+              <div
+                class="prpject_card row justify-content-between align-items-center"
+              >
+                <div class="card_info">
+                  <h4 class="card_title">Landing Page для курса по NFT</h4>
+                  <p class="card_text">
+                    Одностраничный сайт для продажи онлайн-курса <br />
+                    по NFT, выполненный в красно-ораньжевых тонах
+                  </p>
+                  <button class="card_btn">
+                    <a href="./landing.html" class="after_btn"
+                      >Смотреть полностью</a
+                    >
+                    <a href="./landing.html" class="before_card_btn"
+                      >Смотреть</a
+                    >
+                  </button>
+                </div>
+                <div class="card_img">
+                  <img src="./img/card1.webp" alt="" class="card_img_img" />
+                </div>
+              </div>
+              <div
+                class="prpject_card row justify-content-between align-items-center media_cart"
+              >
+                <div class="card_info">
+                  <h4 class="card_title">
+                    Концепты <br />
+                    и дизайн-шоты
+                  </h4>
+                  <p class="card_text">
+                    Мини-концепты<br />
+                    различных блоков сайтов<br />
+                    из разных ниш
+                  </p>
+                  <button class="card_btn">
+                    <a href="#!" class="after_btn">Смотреть полностью</a>
+                    <a href="#!" class="before_card_btn">Смотреть</a>
+                  </button>
+                </div>
+                <div class="card_img">
+                  <img
+                    src="./img/cart_first.webp"
+                    alt=""
+                    class="card_img_img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+              <a
+                href="#contactPage"
+                style="color: #fff; text-align: center"
+                class="row align-items-center more_btn more_btn_1 more_btnnn Contact_Page_btn"
+                >Заказать сайт</a
+              >
+            </div>
+          </div>
+          <section class="contact_sec" id="contactPage">
+            <div class="container">
+              <div class="row align-items-center justify-content-center">
+                <h2 class="section_title f5">Свяжитесь с Нами</h2>
+              </div>
+              <div class="row justify-content-between">
+                <div class="form_div">
+                  <h4 class="contact_titls">
+                    Заполните заявку, наш менеджер свяжется с вами в ближайшее
+                    время
+                  </h4>
+                  <form action="" class="form">
+                    <label for="name">Имя</label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Введите свое имя"
+                    />
+                    <label for="tel">Телефон</label>
+                    <input
+                      type="text"
+                      id="tel"
+                      placeholder="Введите свой номер телефона"
+                    />
+                    <label for="mes">Мессенджер (необязательно)</label>
+                    <input
+                      type="text"
+                      id="mes"
+                      placeholder="Например: телеграм @вашusername"
+                    />
+                    <label for="email">Email (необязательно)</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Введите свой email"
+                    />
+                    <button type="submit">Отправить заявку</button>
+                  </form>
+                </div>
+                <div class="social_div">
+                  <h4 class="contact_titls cant">
+                    Или напишите сейчас в личные<br />
+                    сообщения любой из данных соцсетей
+                  </h4>
+                  <div class="socials">
+                    <div
+                      class="social_card row align-items-center justify-content-between"
+                    >
+                      <h4 class="social_title row align-items-center">
+                        Телефон:
+                      </h4>
+                      <div class="social_link row align-items-center vk_text">
+                        <a href="tel:+7-927-609-91-83">+7-927-609-91-83</a>
+                        <a
+                          href="tel:+7-927-609-91-83"
+                          style="margin: 0; font-size: 0"
+                          ><img src="./img/Group 71.webp" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div
+                      class="social_card row align-items-center justify-content-between"
+                    >
+                      <h4 class="social_title row align-items-center">
+                        Telegram:
+                      </h4>
+                      <div
+                        class="social_link row align-items-center whatsapp-text"
+                      >
+                        <a href="https://t.me/PopWebStudio" target="_blank"
+                          >@PopWebStudio</a
+                        >
+                        <a
+                          href="https://t.me/PopWebStudio"
+                          target="_blank"
+                          style="margin: 0; font-size: 0"
+                          ><img src="./img/Group 71.webp" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div
+                      class="social_card row align-items-center justify-content-between"
+                    >
+                      <h4 class="social_title row align-items-center">
+                        Вконтакте:
+                      </h4>
+                      <div class="social_link row align-items-center">
+                        <a href="https://vk.com/popwebstudio" target="_blank"
+                          >@PopWeb_Studio</a
+                        >
+                        <a
+                          href="https://vk.com/popwebstudio"
+                          target="_blank"
+                          style="margin: 0; font-size: 0"
+                          ><img src="./img/Group 71.webp" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div
+                      class="social_card row align-items-center justify-content-between"
+                    >
+                      <h4 class="social_title row align-items-center">
+                        WhatsApp:
+                      </h4>
+                      <div
+                        class="social_link row align-items-center whatsapp-text"
+                      >
+                        <a
+                          href="https://wa.me/79276099183?text="
+                          target="_blank"
+                          >+7-927-609-91-83</a
+                        >
+                        <a
+                          href="https://wa.me/79276099183?text="
+                          target="_blank"
+                          style="margin: 0; font-size: 0"
+                          ><img src="./img/Group 71.webp" alt=""
+                        /></a>
+                      </div>
+                      <img
+                        src="./img/RectanglebgForm.webp"
+                        alt=""
+                        class="social_img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </header>
+
+      <footer>
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="footer_title row justify-content-between">
+              <a href="./index.html" class="FooterLink"
+                ><img src="./img/Logo.webp" alt=""
+              /></a>
+
+              <div class="footer_button1 footer_button" style="display: none">
+                <a href="#!"><button>ЗАКАЗАТЬ</button></a>
+              </div>
+            </div>
+            <div class="footer_menu row">
+              <div class="footer_menu_title">
+                <ul>
+                  <li><a href="./index.html" class="tit">Главная</a></li>
+                  <li>
+                    <a
+                      href="./index.html#spektoruslug"
+                      class="link_foot Спектр_Услуг_btn"
+                      >Заказать</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="link_foot Последние_Проекты_btn"
+                      >Подробнее</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_menu_title">
+                <ul>
+                  <li>
+                    <a
+                      href="./index.html#spektoruslug"
+                      class="tit Спектр_Услуг_btn"
+                      >Стоимость</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./index.html#spektoruslug"
+                      class="link_foot Спектр_Услуг_btn"
+                      >Спектр услуг</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#contactPage"
+                      class="link_foot zakaz_in_form_big Contact_Page_btn"
+                      >Заказать</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_menu_title">
+                <ul>
+                  <li>
+                    <a
+                      href="#Последние_Проекты"
+                      class="tit Последние_Проекты_btn"
+                      >Портфолио</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#Последние_Проекты"
+                      class="link_foot Последние_Проекты_btn"
+                      >Все проекты</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_menu_title">
+                <ul>
+                  <li>
+                    <a
+                      href="#contactPage"
+                      class="tit zakaz_in_form_big Contact_Page_btn"
+                      >Контакты</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://t.me/PopWebStudio"
+                      class="link_foot"
+                      >Telegram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://wa.me/79276099183?text="
+                      class="link_foot"
+                      >WhatsApp</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://vk.com/popwebstudio"
+                      class="link_foot"
+                      >Vk</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_menu_title">
+                <ul>
+                  <li>
+                    <a href="./index.html#work" class="tit Наш_Подход_btn"
+                      >О студии</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./index.html#work" class="link_foot Наш_Подход_btn"
+                      >Наш подход</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./index.html#work2" class="link_foot Наша_Цель_btn"
+                      >Наша цель</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer_button">
+              <a
+                href="#contactPage"
+                style="cursor: pointer"
+                class="zakaz_in_form_big Contact_Page_btn"
+                ><button style="cursor: pointer">ЗАКАЗАТЬ</button></a
+              >
+            </div>
+          </div>
+          <div
+            class="row align-items-center justify-content-between Footer_footer"
+          >
+            <div class="footer_tel">
+              <a href="tel:+7-927-609-91-83" class="phoneNumberFooter">
+                +7-927-609-91-83
+              </a>
+            </div>
+            <div class="footer_socials">
+              <ul class="row align-items-center">
+                <li class="socials_foot">
+                  <a href="https://vk.com/popwebstudio" target="_blank">
+                    <img src="./img/Group 81.webp" alt="" />
+                  </a>
+                </li>
+                <li class="socials_foot">
+                  <a href="https://t.me/PopWebStudio" target="_blank">
+                    <img src="./img/Group 83.webp" alt="" />
+                  </a>
+                </li>
+                <li class="socials_foot">
+                  <a href="https://wa.me/79276099183?text=" target="_blank">
+                    <img src="./img/Group 80.webp" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="mobile">
+      <header>
+        <div class="container_media">
+          <nav>
+            <div class="logo">
+              <a href="./index.html"
+                ><img src="./img/Logo.webp" alt="" style="width: 130px"
+              /></a>
+            </div>
+            <div class="bars_div">
+              <div class="zakaz zakaz_in_form">
+                <a href="#contactPage_media">ЗАКАЗАТЬ</a>
+              </div>
+              <a href="#!" class="bars"
+                ><img src="./img/Group 99.webp" alt="png"
+              /></a>
+            </div>
+          </nav>
+          <div class="navbar_bars" style="width: 100%">
+            <div
+              class="nav_nav_nav"
+              style="
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 27px;
+                padding-right: 25px;
+                padding-left: 42px;
+              "
+            >
+              <a href="./index.html">
+                <img src="./img/Logo.webp" alt="" width="130px"
+              /></a>
+              <span class="close_nav"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="1.17464"
+                    y1="1.29289"
+                    x2="23.0949"
+                    y2="23.2132"
+                    stroke="url(#paint0_linear_713_498)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="1.29289"
+                    y1="23.2531"
+                    x2="23.2132"
+                    y2="1.33276"
+                    stroke="url(#paint1_linear_713_498)"
+                    stroke-width="2"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_713_498"
+                      x1="0.627198"
+                      y1="2.86678"
+                      x2="12.6139"
+                      y2="28.0075"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#8A2387" />
+                      <stop offset="0.528935" stop-color="#E94057" />
+                      <stop offset="0.993578" stop-color="#F27121" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_713_498"
+                      x1="2.86678"
+                      y1="23.8005"
+                      x2="28.0075"
+                      y2="11.8138"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#8A2387" />
+                      <stop offset="0.528935" stop-color="#E94057" />
+                      <stop offset="0.993578" stop-color="#F27121" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+            </div>
+
+            <ul
+              style="
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                padding-left: 42px;
+                width: 100%;
+              "
+            >
+              <h6
+                style="
+                  font-weight: 500;
+                  font-size: 17.5px;
+                  text-align: center;
+                  color: rgba(0, 0, 0, 0.64);
+                  margin: 0;
+                  padding: 0;
+                  margin-top: 75px;
+                  margin-bottom: 8px;
+                "
+              >
+                Меню
+              </h6>
+              <li class="close_nav">
+                <a
+                  href="./index.html"
+                  style="
+                    font-weight: 500;
+                    font-size: 42px;
+                    line-height: 118.53%;
+                    letter-spacing: -0.065em;
+                    color: #120212;
+                  "
+                  >Главная</a
+                >
+              </li>
+              <li class="close_nav">
+                <a
+                  href="./index.html#Спектр_Услуг_media"
+                  style="
+                    font-weight: 500;
+                    font-size: 42px;
+                    line-height: 118.53%;
+                    letter-spacing: -0.065em;
+                    color: #120212;
+                  "
+                  >Стоимость</a
+                >
+              </li>
+              <li class="close_nav">
+                <a
+                  href="#Последние_Проекты_media"
+                  style="
+                    font-weight: 500;
+                    font-size: 42px;
+                    line-height: 118.53%;
+                    letter-spacing: -0.065em;
+                    color: #120212;
+                  "
+                  >Портфолио</a
+                >
+              </li>
+              <li class="close_nav">
+                <a
+                  href="#contactPage_media"
+                  style="
+                    font-weight: 500;
+                    font-size: 42px;
+                    line-height: 118.53%;
+                    letter-spacing: -0.065em;
+                    color: #120212;
+                  "
+                  >Контакты</a
+                >
+              </li>
+              <li class="close_nav">
+                <a
+                  href="./index.html#work_media"
+                  style="
+                    font-weight: 500;
+                    font-size: 42px;
+                    line-height: 118.53%;
+                    letter-spacing: -0.065em;
+                    color: #120212;
+                  "
+                  >О студии</a
+                >
+              </li>
+
+              <div class="kontakt">
+                <h6
+                  style="
+                    font-weight: 500;
+                    font-size: 17.5px;
+                    text-align: center;
+                    color: rgba(0, 0, 0, 0.64);
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 25px;
+                    margin-bottom: 8px;
+                    text-align: initial;
+                  "
+                >
+                  Контакты
+                </h6>
+                <ul style="display: flex; align-items: center">
+                  <li style="margin-right: 8px; margin-top: 0">
+                    <a href="https://vk.com/popwebstudio" target="_blank"
+                      ><img src="./img/Group 81.webp" alt="" />
+                    </a>
+                  </li>
+                  <li style="margin-right: 8px; margin-top: 0">
+                    <a href="https://t.me/PopWebStudio" target="_blank">
+                      <svg
+                        width="38"
+                        height="38"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <ellipse
+                          cx="15.6394"
+                          cy="15.0369"
+                          rx="14.7541"
+                          ry="14.7659"
+                          fill="url(#paint0_linear_713_522)"
+                        />
+                        <mask
+                          id="mask0_713_522"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="6"
+                          y="6"
+                          width="20"
+                          height="20"
+                        >
+                          <rect
+                            x="6.21313"
+                            y="6.42392"
+                            width="18.8525"
+                            height="18.8675"
+                            fill="url(#pattern0)"
+                          />
+                        </mask>
+                        <g mask="url(#mask0_713_522)">
+                          <rect
+                            x="6.21313"
+                            y="6.42392"
+                            width="18.8525"
+                            height="18.8675"
+                            fill="url(#pattern1)"
+                          />
+                          <rect
+                            x="6.21313"
+                            y="6.42392"
+                            width="18.8525"
+                            height="18.8675"
+                            fill="white"
+                          />
+                        </g>
+                        <defs>
+                          <pattern
+                            id="pattern0"
+                            patternContentUnits="objectBoundingBox"
+                            width="1"
+                            height="1"
+                          >
+                            <use
+                              xlink:href="#image0_713_522"
+                              transform="translate(0 0.000399615) scale(0.0111111 0.0111022)"
+                            />
+                          </pattern>
+                          <pattern
+                            id="pattern1"
+                            patternContentUnits="objectBoundingBox"
+                            width="1"
+                            height="1"
+                          >
+                            <use
+                              xlink:href="#image0_713_522"
+                              transform="translate(0 0.000399615) scale(0.0111111 0.0111022)"
+                            />
+                          </pattern>
+                          <linearGradient
+                            id="paint0_linear_713_522"
+                            x1="1.57613"
+                            y1="15.0369"
+                            x2="29.6989"
+                            y2="15.358"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#8A2387" />
+                            <stop offset="0.528935" stop-color="#E94057" />
+                            <stop offset="0.993578" stop-color="#F27121" />
+                          </linearGradient>
+                          <image
+                            id="image0_713_522"
+                            width="90"
+                            height="90"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAE1ElEQVR4nO2cXYhVVRiGnzMzmtZMZVp21X+ZGRhFdeONYV0EM2UhTQQWJHaZd4FGJPQzlELW1RgkeNUPFDQNFRFldJdeRClqFJWK0Rhqp3JKne3FOhtPx7PPXv9r7e164L06+6z9fS/nrP3t9a29IZFIJBKJRCKRSCQSlediYBR4B5gCDgFjwOyQQdWFy4E1wCQwDWRdNBYsuopzFbAWmAD+o7u57TocJsxqcguwAdhJubGdmgoQb6VYAjwP7Ebd3Ha97Tvw2OkHlgFbgAOYmduuR3wmEStzgBUIcw9jz9xc04hq5LzkQmAY2A4cx7657frIU07RMB9YjagUisowF3rSR3KhaS/DTuLP3FynEHV2LVkCPAvswr2RMyWf73Ccq3fyMmwPfn6p08AXEsc97TJpH7gqw2R0AHgK+Efi2GtdGeCS9jLsN/zPtxnwFeIO8SeJY79xY4MbfJZhZRoH5iI3ZWTAegd+WCVUGVakE8ATrdheU/jeYquuWOJqxIXjM8KUYUX6FbizFeNjCt/bZ9EbY65DmPs15WVSCO0ArmjFuhT4W+G7L9kySRffZZiuxoFZrZgvA35U/H7+L/BGyDJMRyeAxzvi/0RxjINAw8w2OeYgKoVxwpVhOvoFuKMjl00a42zRdk6SWcBm4C+N4ELrU8QU0c6o5ljLNf2TZrNmYCE1g2ic9nfkshS9H8wRYEDTP2mmNAILqSawqkseOhe/XG9pOafIH5rBhdAPwK1dcuhHTCO64w5rOadIVaaOSWBeQQ5jBuM2EYWAc2YDWw0Cda0Z4AWgryD+VZjdOL2r4ZkRq5FbQvSpJvBwj5hvxnzRalTdKnNuB37WCNaF9iPuSIuYh5izTc4RtNO9APi8JEDXmgQu7RFjH6JLbeM8QRnA7AKjq7w+LpqPc160dL41Gt444VHUVr9M9CewUiKmB7CzaniKs6t8UXAbci0gE+1DtJrKWIS9js2XOma4Zj5mNwS9NAFcIhHDEHaXaaPtdPcj1qRtLfbLzse0jpmwdN5c0Xe6R4BjmCV5HHhQ4ZwbDc/XqZ0aeQdhEfp/472oNUBHgNOa5yrSBp2kQzEEvI9agh8iNx/n3IT5v6ebZC68UdEAnqH8F6cyH+cMYb5jv5v2a+YaBfcDRymej0cUx2sA7xWMZ6rgnW5TbgC+4/9JfQtcrzHWc7gxOSNAp9sFg4hlxwzxoM1FGmPch7hrc2Gyt063DxqITY06Cd1I8RRkQ29o5lQrBjl36rEt553u2GkgnsN2abKXTnfsrMetyRmeOt0xcy/uLn7t8tLpjpVr8LOvxFunO0bm4ucJrIwAne5YaCDqbB8mZ4hO0XnJCvyZ/C9qC1m1wkc5lyt4pzs0g8D3uDc6mk53SFzfcp8GrvSWTeQMY7+Dkqt2z3SbYrsnmGudzySqgIsud0YFOt0hsL1vY5evwFX6czHQBB5CbA2zwQeWxqktK7GzSadyne4QvIKZyZXudPukD/gYfaNf9h9ydTF5nO2uAPFWGtW3E2TUrNPtE5X3bWSkTrcRryNv9D2BYqwFA4gd+mUmp063BRZS/u6QbcGiqxl30/vFWKqbKRM9WEt3k5uIhm/CIm9yrtGbgkZUUy5AvJXhCPA78CpnX1qVSCQSiUQikUgkEomcM7QddjWE0qPOAAAAAElFTkSuQmCC"
+                          />
+                        </defs>
+                      </svg>
+                    </a>
+                  </li>
+                  <li style="margin-right: 8px; margin-top: 0">
+                    <a href="https://wa.me/79276099183?text=" target="_blank">
+                      <img src="./img/Group 80.webp" alt=""
+                    /></a>
+                  </li>
+                </ul>
+                <a
+                  href="tel:+7-927-609-91-83"
+                  style="
+                    font-weight: 500;
+                    font-size: 17.5px;
+                    line-height: 156.03%;
+                    letter-spacing: -0.065em;
+                    color: #120212;
+                    display: block;
+                    text-align: left;
+                    margin-top: 8px;
+                    margin-bottom: 40px;
+                  "
+                  >+7-927-609-91-83</a
+                >
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="landing_page">
+            <h1 class="mediaTitle">
+              Главная<br />
+              Страница<br />
+              Интернет- <br />Магазина Dior
+            </h1>
+            <div class="landing_main">
+              <img src="./img/internet_dior1.webp" alt="" class="media" />
+              <img src="./img/internet_dior3.webp" alt="" class="media" />
+              <img src="./img/internet_dior2.webp" alt="" class="media" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="sec1" id="Последние_Проекты_media">
+        <div class="container_media">
+          <div class="title_s1">
+            <h2 class="title_h2">Другие Проекты</h2>
+          </div>
+          <div class="sec1_cardss">
+            <div class="sec1_card">
+              <img src="./img/card1.webp" alt="png" />
+              <h4>
+                Landing Page для <br />
+                курса по NFT
+              </h4>
+              <p>
+                Одностраничный сайт<br />
+                для продажи онлайн-<br />
+                курса по NFT,<br />
+                выполненный в красно-<br />
+                ораньжевых тонах
+              </p>
+              <button>
+                <a href="./landing.html">Смотреть</a>
+              </button>
+            </div>
+            <div class="sec1_card">
+              <img src="./img/card2.webp" alt="png" />
+              <h4>
+                Концепт Landing <br />
+                Page для StarBucks
+              </h4>
+              <p>
+                Концепт одностраничного <br />
+                сайта для презентации <br />
+                нового кафе от StarBucks
+              </p>
+              <button><a href="./starbucks.html">Смотреть</a></button>
+            </div>
+            <div class="sec1_card">
+              <img src="./img/card3.webp" alt="png" />
+              <h4>
+                Landing Page <br />
+                для пиццерии
+              </h4>
+              <p>
+                Одностраничный сайт <br />
+                для интернет-пиццерии <br />
+                с возможностью заказа <br />
+                еды онлайн
+              </p>
+              <button><a href="./pizza.html">Смотреть</a></button>
+            </div>
+            <div class="sec1_card">
+              <img src="./img/cart_first.webp" alt="png" />
+              <h4>
+                Концепты <br />
+                и дизайн-шоты
+              </h4>
+              <p>
+                Мини-концепты <br />
+                различных блоков сайтов <br />
+                из разных ниш
+              </p>
+              <button><a href="./design-shot.html">Смотреть</a></button>
+            </div>
+          </div>
+          <div class="button_zakaz">
+            <a
+              href="#contactPage_media"
+              style="
+                color: white;
+                font-weight: 500;
+                display: block;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+              "
+              >Заказать сайт</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="sec7" id="contactPage_media">
+        <div class="container_media">
+          <h2 class="title_h2___">
+            Свяжитесь <br />
+            с нами
+          </h2>
+          <h3>
+            Заполните заявку, наш менеджер <br />
+            свяжется с вами в ближайшее время
+          </h3>
+          <form action="#!">
+            <label for="name">Имя</label>
+            <input type="text" id="name" placeholder="Введите свое имя" />
+            <label for="number">Телефон</label>
+            <input
+              type="text"
+              id="number"
+              placeholder="Введите свой номер телефона"
+            />
+            <label for="manager">Мессенджер (необязательно)</label>
+            <input
+              type="text"
+              id="manager"
+              placeholder="Например: телеграм @вашusername"
+            />
+            <label for="email">Email (необязательно)</label>
+            <input type="email" id="email" placeholder="Введите свой email" />
+            <button>Отправить заявку</button>
+          </form>
+          <h4>
+            Или напишите сейчас в личные <br />
+            сообщения любой из данных соцсетей
+          </h4>
+          <div class="link_div">
+            <div class="limk_card">
+              <div class="icon_veb">
+                <a href="tel:+7-927-609-91-83"> Телефон: </a>
+              </div>
+              <div class="href_div">
+                <a href="tel:+7-927-609-91-83"
+                  >+7-927-609-91-83<img src="./img/Group 71.webp" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="limk_card">
+              <div class="icon_veb">
+                <a href="https://t.me/PopWebStudio" target="_blank">
+                  Telegram:
+                </a>
+              </div>
+              <div class="href_div">
+                <a href="https://t.me/PopWebStudio" target="_blank"
+                  >@PopWebStudio <img src="./img/Group 71.webp" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="limk_card">
+              <div class="icon_veb">
+                <a href="https://vk.com/popwebstudio" target="_blank">
+                  Вконтакте:
+                </a>
+              </div>
+              <div class="href_div">
+                <a href="https://vk.com/popwebstudio" target="_blank"
+                  >@PopWebStudio <img src="./img/Group 71.webp" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="limk_card">
+              <div class="icon_veb">
+                <a href="https://wa.me/79276099183?text=" target="_blank">
+                  WhatsApp:
+                </a>
+              </div>
+              <div class="href_div">
+                <a href="https://wa.me/79276099183?text=" target="_blank"
+                  >+7-927-609-91-83<img src="./img/Group 71.webp" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container_media">
+          <div class="foot_logo">
+            <a href="./index.html"><img src="./img/Logo.webp" alt="png" /></a>
+            <button class="fuut_butt zakaz_in_form">
+              <a href="#contactPage_media" style="color: #fff">Заказать</a>
+            </button>
+          </div>
+          <div class="foot_nav foot_n1">
+            <ul>
+              <li><a class="foot_gl" href="./index.html">Главная</a></li>
+              <li><a href="./index.html#Спектр_Услуг_media">Заказать</a></li>
+              <li>
+                <a href="#Последние_Проекты_media">Подробнее</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a class="foot_gl" href="./index.html#Спектр_Услуг_media"
+                  >Стоимость</a
+                >
+              </li>
+              <li>
+                <a href="./index.html#Спектр_Услуг_media">Спектр услуг</a>
+              </li>
+              <li><a href="#contactPage_media">Заказать </a></li>
+            </ul>
+            <ul>
+              <li>
+                <a class="foot_gl" href="#Последние_Проекты_media">Портфолио</a>
+              </li>
+              <li>
+                <a href="#Последние_Проекты_media">Все проекты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="foot_nav foot_n2">
+            <ul>
+              <li>
+                <a class="foot_gl" href="#contactPage_media">Контакты</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://t.me/PopWebStudio">Telegram</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://wa.me/79276099183?text="
+                  >WhatsApp</a
+                >
+              </li>
+              <li>
+                <a target="_blank" href="https://vk.com/popwebstudio">Vk</a>
+              </li>
+            </ul>
+            <ul class="ul_footer">
+              <li>
+                <a class="foot_gl" href="./index.html#work_media">О студии</a>
+              </li>
+              <li><a href="./index.html#work_media">Подход</a></li>
+              <li><a href="./index.html#work2_media">Цель</a></li>
+            </ul>
+          </div>
+          <div class="foot_bottom">
+            <div class="foot_b_icons">
+              <a href="https://vk.com/popwebstudio" target="_blank"
+                ><img src="./img/Group 81.webp" alt="png"
+              /></a>
+              <a href="https://t.me/PopWebStudio" target="_blank"
+                ><img src="./img/Group 83.webp" alt="png"
+              /></a>
+              <a href="https://wa.me/79276099183?text=" target="_blank"
+                ><img src="./img/Group 80.webp" alt="png"
+              /></a>
+            </div>
+            <a href="tel:+79276099183" class="number_f"> +7-927-609-91-83 </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      const bars = document.querySelector(".bars");
+      const navbar_bars = document.querySelector(".navbar_bars");
+      const closee = document.querySelectorAll(".close_nav");
+
+      bars.addEventListener("click", function (e) {
+        e.preventDefault();
+        navbar_bars.style.position = "fixed";
+        navbar_bars.style.right = 0;
+      });
+      for (var i = 0; i < closee.length; i++) {
+        closee[i].addEventListener("click", function () {
+          navbar_bars.style.right = "-100%";
+        });
+      }
+    </script>
+
+    <script>
+      const header_navbar = document.querySelector(".header_navbar");
+
+      header_navbar.style.transition = "5s";
+
+      window.addEventListener("scroll", (e) => {
+        if (window.scrollY > 70) {
+          header_navbar.style.position = "fixed";
+          header_navbar.style.top = "0";
+          header_navbar.style.left = "50%";
+        } else {
+          header_navbar.style.position = "absolute";
+          header_navbar.style.top = "0";
+          header_navbar.style.left = "50%";
+        }
+      });
+    </script>
+    <script>
+      const Последние_Проекты = document.querySelectorAll(
+        ".Последние_Проекты_btn"
+      );
+
+      for (var i = 0; i < Последние_Проекты.length; i++) {
+        Последние_Проекты[i].addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 5500,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      const Contact_Page = document.querySelectorAll(".Contact_Page_btn");
+
+      for (var i = 0; i < Contact_Page.length; i++) {
+        Contact_Page[i].addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 6700,
+            behavior: "smooth",
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
